@@ -5,6 +5,14 @@
 <struts>
    <!-- 配置文件改了以后不用重新启动 -->
    <constant name="struts.devMode" value="true"/>
-   <include file="struts-person.xml"></include>
+    <constant name="struts.ui.theme" value="simple"/>
+    <include file="struts-person.xml"></include>
     <include file="struts-department.xml"></include>
+    <include file="struts-post.xml"></include>
+    <include file="struts-user.xml"></include>
+    <package name="ajax" extends="struts-default">
+        <result-types>
+            <result-type name="ajaxResult" class="com.oa.result.AjaxResult"></result-type>
+        </result-types>
+    </package>
 </struts>	

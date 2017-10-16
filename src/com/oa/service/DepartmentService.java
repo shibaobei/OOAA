@@ -1,7 +1,6 @@
 package com.oa.service;
 
 import com.oa.entity.Department;
-import com.oa.utils.DeleteMode;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -12,7 +11,7 @@ import java.util.Collection;
 public interface DepartmentService {
     public void saveDepartment(Department department);
     public void updateDepartment(Department department);
-    public void deleteDepartmentById(Serializable id, DeleteMode DeleteMode);
+    public void deleteDepartmentById(Serializable id, String DeleteMode);
     public Collection<Department> getAllDepartment();
-    public Object getDepartmentById(Serializable id);
+    public Department getDepartmentById(Serializable id);
 }

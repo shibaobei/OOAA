@@ -18,7 +18,7 @@ $().ready(function(){
 	$.confirm({
 		message:"您确认要删除吗?",
 		callback:function(){
-		   alert("404");
+
 	    }
 	});
 });

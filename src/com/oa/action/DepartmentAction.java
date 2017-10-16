@@ -2,32 +2,23 @@ package com.oa.action;
 
 import com.oa.entity.Department;
 import com.oa.service.DepartmentService;
+import com.oa.utils.DeleteMode;
 import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.ModelDriven;
-import com.opensymphony.xwork2.interceptor.ModelDrivenInterceptor;
-import org.omg.CORBA.PUBLIC_MEMBER;
+import org.springframework.beans.BeanUtils;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
 
+import javax.annotation.Resource;
 import java.util.Collection;
 
 /**
  * Created by Administrator on 2017-10-09.
  */
-public class DepartmentAction extends BaseAction implements ModelDriven<Department>{
-    private Department model  = new Department();
-    @Override
-    public Department getModel() {
-        return this.model;
-    }
-
+@Controller("departmentAction")
+@Scope("prototype")
+public class DepartmentAction extends BaseAction<Department>{
+    @Resource(name="departmentService")
     private DepartmentService departmentService;
-
-    public DepartmentService getDepartmentService() {
-        return departmentService;
-    }
-
-    public void setDepartmentService(DepartmentService departmentService) {
-        this.departmentService = departmentService;
-    }
 
     public String getAllDepartment(){
         Collection<Department> departmentList = this.departmentService.getAllDepartment();
@@ -112,8 +103,51 @@ public class DepartmentAction extends BaseAction implements ModelDriven<Departme
         return listAction;
     }
     public String deleteDepartment(){
-       return null;
+       this.departmentService.deleteDepartmentById(this.getModel().getDid(), DeleteMode.DEL_PRE_RELEASE);
+       return action2action;
     }
 
+   public String addUI(){
+        return addUI;
+   }
+   public String add(){
+       /**
+        * 新建一个department
+        * 把模型驱动中的值默认到department中
+        * 执行save方法
+        */
+       Department department = new Department();
+       //对象属性复制过程
+       BeanUtils.copyProperties(this.getModel(),department);
+       this.departmentService.saveDepartment(department);
+       return action2action;
+   }
 
+    /**
+     * 一般情况下，如果数据进行回显，则把数据放入到对象栈中，页面上可以根据name属性的值进行回显
+     * 如果把数据放入到了map栈，则页面根据value的值进行回显，而且value="%{ognl表达式}"
+     * @return
+     */
+   public String updateUI(){
+       Department department = (Department)this.departmentService.getDepartmentById(this.getModel().getDid());
+       ActionContext.getContext().getValueStack().getRoot().add(0,department);
+       // BeanUtils.copyProperties(department,this.getModel());
+       //ActionContext.getContext().put("department",department);
+       return updateUI;
+   }
+    /**
+     * 修改
+     * @return
+     */
+    public String update(){
+        /**
+         * 1、先根据id把该数据从数据库中提取出来(或者从session的缓存中)
+         * 2、把修改以后的数据赋值到该对象中
+         * 3、针对该对象进行update操作
+         */
+        Department department = this.departmentService.getDepartmentById(this.getModel().getDid());
+        BeanUtils.copyProperties(this.getModel(),department);
+        this.departmentService.updateDepartment(department);
+        return action2action;
+    }
 }

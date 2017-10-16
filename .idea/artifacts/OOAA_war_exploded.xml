@@ -42,6 +42,8 @@
           <element id="file-copy" path="$PROJECT_DIR$/lib/struts2-json-plugin-2.1.8.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/lib/struts2-spring-plugin-2.1.8.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/lib/mysql-connector-java-5.1.7-bin.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/standard.jar" />
         </element>
       </element>
     </root>

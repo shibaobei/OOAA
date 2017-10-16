@@ -41,10 +41,15 @@
         	<s:iterator value="#departmentList">
 				<tr class="TableDetail1 template">
 					<td><s:property value="dname"/></td>
-					<td><s:property value="description"/></td>
+					<td><s:property value="description" escape="false"/></td>
 					<td>
-						<s:a action="">删除</s:a>
-						<a href="saveUI.html">修改</a>
+
+						<!--
+							在struts2的标签中只能用ognl表达式，不能用el表达式
+							在html标签中，只能用el表达式，不能用ognl表达式
+						 -->
+						<s:a action="departmentAction_deleteDepartment?did=%{did}">删除</s:a>
+						<s:a href="departmentAction_updateUI?did=%{did}">修改</s:a>
 					</td>
 				</tr>
 			</s:iterator>
@@ -91,7 +96,7 @@
     <!-- 其他功能超链接 -->
     <div id="TableTail">
         <div id="TableTail_inside">
-            <a href="saveUI.html"><img src="${pageContext.request.contextPath}/css/images/createNew.png" /></a>
+            <a href="departmentAction_addUI.action"><img src="${pageContext.request.contextPath}/css/images/createNew.png" /></a>
         </div>
     </div>
 </div>

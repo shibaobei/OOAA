@@ -6,6 +6,11 @@
   <package name="department" namespace="/"  extends="struts-default">
   	<action name="departmentAction_*" method="{1}" class="departmentAction">
   		<result name="listAction">WEB-INF/jsp/department/list.jsp</result>
-  	</action>
+		<result name="action2action" type="redirectAction">departmentAction_getAllDepartment.action</result>
+        <result name="addUI">WEB-INF/jsp/department/add.jsp</result>
+		<result name="updateUI">WEB-INF/jsp/department/update.jsp</result>
+	</action>
+
+
   </package>
 </struts>	
