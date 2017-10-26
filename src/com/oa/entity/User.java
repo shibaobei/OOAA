@@ -16,6 +16,7 @@ public class User implements Serializable{
     private String email;
     private Department department;
     private Set<Post> posts;
+    private Set<Menuitem> menuitems;
 
 
     public Long getUid() {
@@ -80,5 +81,13 @@ public class User implements Serializable{
 
     public void setPosts(Set<Post> posts) {
         this.posts = posts;
+    }
+
+    public Set<Menuitem> getMenuitems() {
+        return menuitems;
+    }
+
+    public void setMenuitems(Set<Menuitem> menuitems) {
+        this.menuitems = menuitems;
     }
 }

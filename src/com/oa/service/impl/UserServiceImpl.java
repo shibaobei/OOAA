@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.io.Serializable;
 import java.util.Collection;
 
 /**
@@ -21,13 +22,19 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    public User getUserById(Serializable id) {
+        return (User)this.userDao.getEntityById(id);
+    }
+
+    @Override
     @Transactional(readOnly = false)
     public void saveUser(User user) {
         this.userDao.saveEntity(user);
     }
 
     @Override
-    public void update(User user) {
+    @Transactional(readOnly = false)
+    public void updateUser(User user) {
         this.userDao.updateEntity(user);
     }
 

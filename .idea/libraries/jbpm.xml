@@ -1,0 +1,70 @@
+<component name="libraryTable">
+  <library name="jbpm">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/activation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/antlr.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/antlr-runtime.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/avalon-framework.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/bsh.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/cglib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/commons-collections.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/dom4j.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/drools-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/drools-compiler.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/drools-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/errai-bus.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/errai-common.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/freemarker.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/gson.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/guice.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/guice-aopalliance.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/guice-servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/gwt-console-rpc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/gwt-console-server-integration.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/hibernate-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/hsqldb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/janino.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/javassist.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/jbpm.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/jbpm-bpmn.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/jbpm-console-form-plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/jbpm-console-graphView-plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/jbpm-console-integration.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/jbpm-db.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/jbpm-examples-tests.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/jbpm-jboss.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/jbpm-test-db-tests.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/jbpm-tomcat6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/joda-time.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/jta.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/juel-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/juel-engine.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/juel-impl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/junit.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/junit-4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/livetribe-jsr223.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/log4j.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/logkit.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/mockejb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/mockrunner.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/mvel2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/mysql-connector-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/oro.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/postgresql.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/slf4j-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/slf4j-jdk14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/slf4j-log4j12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/subethasmtp-smtp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/subethasmtp-wiser.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/errai-bus.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/errai-common.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jbpm/gwt-console-server-integration.jar!/" />
+    </SOURCES>
+  </library>
+</component>

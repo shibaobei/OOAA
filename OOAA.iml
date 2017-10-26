@@ -21,16 +21,12 @@
     </content>
     <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="antlr-2.7.6" level="project" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/lib" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="struts2" level="project" />
+    <orderEntry type="library" name="spring" level="project" />
+    <orderEntry type="library" name="junit" level="project" />
+    <orderEntry type="library" name="jstl" level="project" />
+    <orderEntry type="library" name="json" level="project" />
+    <orderEntry type="library" name="jbpm" level="project" />
+    <orderEntry type="library" name="jsp-api" level="project" />
   </component>
 </module>

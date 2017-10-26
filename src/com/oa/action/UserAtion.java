@@ -92,6 +92,59 @@ public class UserAtion extends BaseAction<User>{
         this.userService.saveUser(user);
         return action2action;
     }
+    /**
+     * 如果是页面跳转到action,在action中有一个Long[]数组，struts2的拦截器可以自动赋值
+     * 但是如果是回显数据，必须在程序中创建数组的对象
+     * @return
+     */
+    public String updateUI(){
+        /**
+         * 1、值的回显
+         *    * 用户的一般属性的回显
+         *    * 部门的回显
+         *    * 岗位的回显
+         * 2、 把部门的数据全部提取出来
+         * 3、把岗位的数据全部提取出来
+         */
+        //把用户放入到对象栈中
+        User user = this.userService.getUserById(this.getModel().getUid());
+        ActionContext.getContext().getValueStack().push(user);
+        this.did = user.getDepartment().getDid();
+        Set<Post> posts = user.getPosts();
+        int index = 0;
+        this.pids = new Long[posts.size()];
+        for(Post post:posts){
+            this.pids[index] = post.getPid();
+            index++;
+        }
+        //把部门表和岗位表的数据提取出来
+        Collection<Department> departmentList = this.departmentService.getAllDepartment();
+        ActionContext.getContext().put("departmentList", departmentList);
+        Collection<Post> postList = this.postService.getAllPost();
+        ActionContext.getContext().put("postList", postList);
+        return updateUI;
+    }
+
+    public String update(){
+        /**
+         * 1、利用模型驱动获取用户的一般数据
+         * 2、利用属性驱动获取最新的did和pids
+         * 3、根据用户的id提取出user对象
+         * 4、把模型驱动的值复制到user对象中
+         * 5、重新建立user对象和岗位和部门之间的关系
+         */
+        //一般属性的赋值
+        User user = this.userService.getUserById(this.getModel().getUid());
+        BeanUtils.copyProperties(this.getModel(), user);
+        //重新建立user和部门之间的关系
+        Department department = this.departmentService.getDepartmentById(this.did);
+        user.setDepartment(department);
+        //重新建立user与岗位之间的关系
+        Set<Post> posts = this.postService.getPostsByPids(this.pids);
+        user.setPosts(posts);
+        this.userService.updateUser(user);
+        return action2action;
+    }
     public String checkUsername(){
         User user = this.userService.getUserByName(this.getModel().getUsername());
         if(user==null){
